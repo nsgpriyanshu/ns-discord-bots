@@ -1,129 +1,40 @@
-# nsdiscordbot
+# ns-discord-bots
 
-Welcome to the Discord Bot Project! This repository contains the code for a production-level Discord bot built using Discord.js. This bot includes a range of features such as command handling, event handling, and error logging. Below you'll find instructions on how to set up and run the bot, as well as details about the project's structure and contributing guidelines.
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="25" height="25" /> Overview
 
-## Table of Contents
+This repository is a **centralized home** for all the Discord bots I build using different languages —  
+**JavaScript**, **C**, and **Python**.
 
-1. [Project Overview](#project-overview)
-2. [Features](#features)
-3. [Prerequisites](#prerequisites)
-4. [Installation](#installation)
-5. [Configuration](#configuration)
-6. [Running the Bot](#running-the-bot)
-7. [Command and Event Structure](#command-and-event-structure)
-8. [Contributing](#contributing)
+I created this repo **to learn**, explore, and experiment with how Discord bots behave across different programming ecosystems.  
+Each folder represents a standalone bot or project built purely for **learning and personal growth**.
 
-## Project Overview
+---
 
-This Discord bot is designed to interact with users on Discord servers by responding to commands and events. It features a flexible command handling system and robust error handling to ensure reliability.
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bookmark%20Tabs.png" alt="Bookmark Tabs" width="25" height="25" /> Repository Structure
 
-## Features
+| Language | Folder | Description |
+|---------|--------|-------------|
+| <img src="https://skillicons.dev/icons?i=js" width="20" /> JavaScript | [`/javascript`](./javascript) | Discord bot built using JS (discord.js). |
+| <img src="https://skillicons.dev/icons?i=c" width="20" /> C | [`/c`](./c) | C-based Discord utilities / experimental bot logic. |
+| <img src="https://skillicons.dev/icons?i=py" width="20" /> Python | [`/python`](./python) | Discord bot using Python (discord.py). |
 
-- **Slash Commands**: Supports multiple slash commands organized in directories.
-- **Message Commands**: Handles traditional text commands.
-- **Event Handling**: Listens to and processes various Discord events.
-- **Error Handling**: Logs and reports errors to a specified channel.
-- **Configuration Management**: Uses environment variables for sensitive information.
+---
 
-## Prerequisites
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Star-Struck.png" alt="Star-Struck" width="25" height="25" /> Why This Repo?
 
-- **Node.js**: Ensure you have Node.js installed (preferably the latest LTS version).
-- **Discord.js**: This project uses Discord.js v14.
-- **A Discord Bot Token**: Obtain a bot token from the [Discord Developer Portal](https://discord.com/developers/applications).
+* To explore how Discord bots work in **different programming languages**.
+* To maintain all my bot experiments in **one centralized place**.
+* To learn architecture patterns, API behavior, and multi-language approaches.
+* Purely **learning-oriented**, not production-focused.
 
-## Installation
+---
 
-1. **Clone the Repository**:
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Closed%20Mailbox%20with%20Raised%20Flag.png" alt="Mailbox" width="25" height="25" /> Support
 
-   ```bash
-   git clone https://github.com/nsgpriyanshu/nsdiscordbot.git
-   ```
+If you need help or want to talk about Discord bots, feel free to join my community:
 
-2. **Navigate to the Project Directory**:
+**Discord Server:** https://discord.gg/eG34B6JVtM
 
-   ```bash
-   cd your-discord-bot-repo
-   ```
+---
 
-3. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-## Configuration
-
-1. **Create a `.env` File** in the root directory of the project and add the following environment variables:
-
-   ```env
-   BOT_TOKEN=your-discord-bot-token
-   BOT_ID=your-discord-bot-id
-   ERROR_CHANNEL=your-error-log-channel-id
-   DEVELOPER_IDS=comma-separated-list-of-developer-ids
-   ```
-
-2. **Update `botConfig.js`** with the appropriate configuration values:
-   ```js
-   module.exports = {
-     BOT_TOKEN: process.env.BOT_TOKEN,
-     BOT_ID: process.env.BOT_ID,
-     ERROR_CHANNEL: process.env.ERROR_CHANNEL,
-     DEVELOPER_IDS: process.env.DEVELOPER_IDS.split(','),
-   }
-   ```
-
-## Running the Bot
-
-1. **Start the Bot**:
-   ```bash
-   npm start
-   ```
-
-## Command and Event Structure
-
-- **Commands**: Commands are located in the `src/commands` directory. Commands are separated into `slashCommands` and `messageCommands` subdirectories.
-- **Events**: Event handlers are located in the `src/events` directory. They include interaction events and message events.
-
-### Example Command File (`ping.js`)
-
-```js
-const { SlashCommandBuilder } = require('discord.js')
-
-module.exports = {
-  data: new SlashCommandBuilder().setName('ping').setDescription('Replies with Pong!'),
-  async execute(interaction) {
-    await interaction.reply('Pong!')
-  },
-}
-```
-
-### Example Event File (`messageCreate.js`)
-
-```js
-const { EmbedBuilder } = require('discord.js')
-const { COLORS, EMOJIS } = require('../constants/botConst')
-
-module.exports = {
-  name: 'messageCreate',
-  execute(message) {
-    // Event logic for message creation
-  },
-}
-```
-
-## Contributing
-
-We welcome contributions to this project! If you want to contribute, then you are welcome.
-
-## References
-
-- [Discord.js Guide](https://discordjs.guide/#before-you-begin) - The official Discord.js guide, aimed at users who are either unfamiliar or inexperienced with Node.js and creating Discord bots. It assumes you have a basic understanding of JavaScript.
-
-## Support
-
-If you need assistance with understanding the documentation, encounter any issues, or simply require guidance, please join our [Discord server](https://discord.gg/vRXgWaar2G). Our community and support team are here to help you!
-
-## Contributors
-
-<img src="https://raw.githubusercontent.com/nsgpriyanshu/creatorsworld/main/public/icons/colourfull-pfp.jpg" alt="nsgpriyanshu" width="50" height="50" style="border-radius: 50%;" />
-
-[![nsgpriyanshu](https://img.shields.io/badge/Developer-nsgpriyanshu-author.svg?color=f10a0a)](https://nsgpriyanshu.github.io)
+ <img src="https://img.shields.io/badge/Developer-nsgpriyanshu-author.svg?color=f10a0a" alt="nsgpriyanshu" />
