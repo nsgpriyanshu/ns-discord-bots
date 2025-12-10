@@ -1,0 +1,20 @@
+{
+  "logging": {
+    "level": "info",
+    "filename": "bot.log",
+    "quiet": false,
+    "overwrite": true,
+    "use_color": true,
+    "http": {
+      "enable": true,
+      "filename": "http.log"
+    }
+  },
+  "discord": {
+    "token": "YOUR-BOT-TOKEN-HERE",
+    "default_prefix": {
+      "enable": false,
+      "prefix": "!"
+    }
+  }
+}
