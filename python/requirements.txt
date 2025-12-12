@@ -1,0 +1,5 @@
+discord.py>=2.3.2      # provides v2 app_commands (slash commands)
+python-dotenv>=1.0.0
+uvloop; sys_platform != 'win32'   # optional for Linux performance
+aiohttp>=3.8.1
+pydantic>=1.10.0       # optional for config validation
